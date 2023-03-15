@@ -30,42 +30,54 @@
     <HR>
     <H2>@CONTAINERS</H2>
     <H3>FLUID-CONTAINER</H3>
-    <P>This is going to be a fluid container. It will go full width of page. With some margin.</P>
+    <div class="container ">This is going to be a fluid container. It will go full width of page. With some margin.
+    </div>
     <H3>CENTER-CONTAINER</H3>
-    <P>This is going to be a center container. It will go till a given width and center content.</P>
+    <div class="container container-center ">This is going to be a center container. It will go till a given width and
+        center content.</div>
     <HR>
     <H2>@LINKS</H2>
-    <A HREF="/">PRIMARY LINKS</A>
-    <A HREF="/">SECONDARYLINKS</A>
+    <A class=" link link-primary" HREF="/">PRIMARY LINKS</A>
+    <A class=" link link-secondary" HREF="/">SECONDARY LINKS</A>
+
+
     <HR>
     <H2>@LISTS</H2>
     <H3>UNORDERED LISTS</H3>
-    <UL>
+    <P>THIS PARAGRAPH WILL NOT HAVE BULLETS</P>
+    <UL CLASS="NON-BULLET">
         <LI>ITEM ONE</LI>
         <LI>ITEM TWO</LI>
         <LI>ITEM THREE</LI>
     </UL>
     <H3>UNORDERED INLINE LISTS</H3>
-    <LI>ITEM ONE </LI>
-    <LI>ITEM TWO</LI>
-    <LI>ITEM THREE</LI>
+    <ul>
+        <LI CLASS="LIST-ITEM-INLINE">ITEM ONE </LI>
+        <LI CLASS="LIST-ITEM-INLINE">ITEM TWO </LI>
+        <LI CLASS="LIST-ITEM-INLINE">ITEM THREE </LI>
+    </ul>
+
     <H3> REVERSE ORDERED LISTS</H3>
 
-    <OL>
+    <OL reversed>
         <LI>MILK</LI>
         <LI>EGG</LI>
         <LI>BREAD</LI>
     </OL>
     <HR>
-    <H2>@NAV</H2>
-    <DIV>IAM BRAND</DIV>
-    <UL>
 
-        <LI> <A HREF="/">HOME</A> </LI>
-        <LI> <A HREF="/">PROJECTS</A> </LI>
-        <LI> <A HREF="/">BRAND</A> </LI>
+    <H2>@NAV</H2>
+
+  <nav class="navigation container">
+    <DIV>IAM BRAND</DIV>
+    <UL Class="NON-BULLET navpills ">
+
+        <LI class=" LIST-ITEM-INLINE  "> <A class="link" HREF="/">HOME</A> </LI>
+        <LI class=" LIST-ITEM-INLINE  "> <A class="link" HREF="/">PROJECTS</A> </LI>
+        <LI class="  LIST-ITEM-INLINE  "> <A class="link" HREF="/">BRAND</A> </LI>
 
     </UL>
+  </nav>
     <HR>
     <H2>@HEADER</H2>
     <HEADER>
@@ -74,28 +86,28 @@
     </HEADER>
     <hr>
     <h2>@section</h2>
-    <section> 
+    <section>
         <h3>white section</h3>
         <p>this will have white background</p>
-    
+
     </section>
-    <section> 
+    <section>
         <h3>offwhite section</h3>
         <p>this will have gray background</p>
-    
+
     </section>
     <hr>
     <h2>@footer</h2>
-    <footer> 
+    <footer>
         <div>some small heading inside footer</div>
         <ul>
             <li>social one </li>
             <li>social two</li>
             <li>social three</li>
         </ul>
-        
+
     </footer>
-    
+
 
 
 </body>
