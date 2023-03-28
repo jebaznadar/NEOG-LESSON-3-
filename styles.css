@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&family=Montserrat:wght@400;700&display=swap');
 body
 {
-    font-family: 'Montserrat', sans-serif;
-    margin: 0px;
+    font-family: 'EB Garamond', serif;
+  
 }
 :root{
     --primarycolor: #EA580C ;
@@ -35,7 +35,7 @@ padding: 0.5rem 1rem ;
 
 }
 .blog{
-    
+
 }
 .link-secondary{
     border-radius: 0.5rem;
@@ -116,4 +116,7 @@ color: white;
 }
 .showcase-list{
     
+}
+.SIZE{
+    font-size: larger;
 }
