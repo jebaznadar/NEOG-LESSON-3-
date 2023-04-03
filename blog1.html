@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,53 +8,230 @@
     <title>blog 1</title>
     <link href="/styles.css" rel="stylesheet" />
 </head>
+
 <body>
     <nav class="navigation container">
         <h3>WEB DEVELOPER</h3>
         <UL Class="NON-BULLET navpills ">
-    
+
             <LI class=" LIST-ITEM-INLINE  "> <A class="link" HREF="/INDEX.HTML">HOME</A> </LI>
             <LI class=" LIST-ITEM-INLINE  "> <A class="link" HREF="/projects.html">PROJECTS</A> </LI>
             <LI class="  LIST-ITEM-INLINE  "> <A class="link link-active" HREF="/blogs.html">BLOGS</A> </LI>
-    
+
         </UL>
     </nav>
 
     <HEADER class="hero">
-        
+
         <H1 class="hero-heading"> MOST USED GIT COMMANDS ? </H1>
-        
+
     </HEADER>
     <article>
-        <p class="container container-center SIZE"> <A class="link " HREF="https://en.wikipedia.org/wiki/Git">GIT</A> is open-source software and distributed version control system.
-             It helps developers easily handle different versions of a source code. With it, you can know who did what, when, and why.
-              Nowadays, Git has become a must-have tool for any developer, and knowing Git commands is essential for developers to use Git to its full potential. 
-              There are hundreds of Git commands, but only a few significant commands are used regularly.
-             <br> <BR> In this article, you will learn the most helpful Git commands that will take you to the next level in development:<BR> <BR>
-                <UL class="container container-MIDDLE SIZE">
-                    <LI><A class="link" href="#GIT-INIT">GIT INIT</A></LI> <BR>
-                    <LI><A class="link" href="#GIT CLONE">GIT CLONE</A></LI> <BR>
-                    <LI><A class="link" href="#GIT BRANCH">GIT BRANCH</A></LI> <BR>
-                    <LI><A class="link" href="#GIT CHECKOUT">GIT CHECKOUT</A></LI> <BR>
-                    <LI><A class="link" href="#GIT ADD">GIT ADD</A></LI> <BR>
-                    <LI><A  class="link"href="#GIT COMMIT">GIT COMMIT</A></LI> <BR>
-                    <LI><A class="link" href="#GIT PUSH">GIT PUSH</A></LI>  <BR>
-                    <LI><A class="link" href="#GIT MERGE">GIT MERGE</A></LI>  <BR>
-                    <LI><A  class="link"href="#GIT STATUS">GIT STATUS</A></LI>  <BR>
-                </UL>
-              <BR>
+        <p class="container container-center SIZE"> <A class="link " HREF="https://en.wikipedia.org/wiki/Git">GIT</A> is
+            open-source software and distributed version control system.
+            It helps developers easily handle different versions of a source code. With it, you can know who did what,
+            when, and why.
+            Nowadays, Git has become a must-have tool for any developer, and knowing Git commands is essential for
+            developers to use Git to its full potential.
+            There are hundreds of Git commands, but only a few significant commands are used regularly.
+            <br> <BR> In this article, you will learn the most helpful Git commands that will take you to the next level
+            in development:<BR> <BR>
+            <UL class="container container-MIDDLE SIZE">
+                <LI><A class="link" href="#GIT-INIT">GIT INIT</A></LI> <BR>
+                <LI><A class="link" href="#GIT-CLONE">GIT CLONE</A></LI> <BR>
+                <LI><A class="link" href="#GIT-BRANCH">GIT BRANCH</A></LI> <BR>
+                <LI><A class="link" href="#GIT-CHECKOUT">GIT CHECKOUT</A></LI> <BR>
+                <LI><A class="link" href="#GIT-ADD">GIT ADD</A></LI> <BR>
+                <LI><A class="link" href="#GIT-COMMIT">GIT COMMIT</A></LI> <BR>
+                
+            </UL>
 
-<h2 id="GIT-INIT" class="container container-MIDDLE"> 1. GIT INIT </h2>
-    </p></article>
+            <h2 id="GIT-INIT" class="container container-center"> 1. GIT INIT </h2><br> <br> 
+            <div class="container container-center SIZE">The git init command lets us create a new Git repository. This
+                is
+                the first command to start a new project in a GitHub repository.
+                Go to the directory that contains your project files and run the git init command.
+                A hidden .git subdirectory will be added to it.
+            </div>
+        </p>
+    </article>
+
+    <h3 class="container container-center">USAGE
+
+    </h3> <br>
+
+    <div class=" container container-MIDDLE CODE SIZE"> $ git init</div> <br>
+    <div class="SIZE container-center">You can also provide a repository name with the git init command.</div><br>
+    <div class=" container container-MIDDLE CODE "> $ git init &lt;your repository name&gt; </div> <br><br> 
+
+    <h2 id="GIT-CLONE" Class="container container-center"> 2. GIT CLONE </h2><br> <br> 
+    <div class="container container-center SIZE">
+        Git clone creates a local working copy of the source code from a remote
+        repository.
+        When you clone a repository, the code will be automatically downloaded to your machine. <br><br>
+
+        This command will add the original location as a remote location so you can pull changes from it and push
+        changes to it if you have permission.
+    </div><br> 
+    <h3 class="container container-center">USAGE
+
+    </h3> <br>
+
+    <div class=" container container-MIDDLE CODE "> $ git clone &lt;git-repo-url</git-repo-url>&gt; </div> <br><br> 
+
+    <h2 id="GIT-BRANCH" Class="container container-center"> 3. GIT BRANCH </h2><br> <br> 
+    <div class="container container-center SIZE">
+        Git branch lets us add a new branch to an existing branch, view all existing branches, and delete a branch.
+    </div><br> 
+    <h3 class="container container-center">USAGE </h3><br> 
+    <div class="container container-center SIZE">
+        Create a new branch locally:
+    </div>
+    <div class=" container container-MIDDLE CODE "> $ git branch &lt;branch-name&gt; </div> <br>
+    <div class="container container-center SIZE">
+        List all the local and remote branches:
+    </div>
+
+    <br>
+
+    <div class=" container container-MIDDLE CODE "> $ git branch -a </div> <br> 
+    <div class="container container-center SIZE">
+        View all branches and see which branch you’re currently working on:
+    </div> <br> 
+    <div class=" container container-MIDDLE CODE "> $ git branch or $ git branch --list</div> <br> 
+    <div class="container container-center SIZE">
+        Delete a branch:
+    </div><br> 
+    <div class=" container container-MIDDLE CODE "> $ git branch -d &lt; branch-name &gt; </div> <br> 
+
+ <div class="container container-center SIZE">
+    Rename a branch:
+    </div><br> 
+    <div class=" container container-MIDDLE CODE "> git branch -m &lt;branch-name&gt; &lt;new-branch name&gt;</div> <br> <br> 
+
+
+
+    <h2 id="GIT-CHECKOUT" class="container container-center"> 4. GIT CHECKOUT </h2><br> <br> 
+            <div class="container container-center SIZE">The git checkout command allows us to switch to an existing branch or create and switch to a new branch. 
+                To achieve this, the branch you want to switch to should be present in your local system and the changes in your current branch should be committed or stashed before you make the switch.
+                 You can also use this command for checking out the files..
+            </div><br> 
+            <h3 class="container container-center">USAGE </h3><br> 
+            <div class="container container-center SIZE">
+                Switch to an existing branch:
+            </div><br> 
+            <div class=" container container-MIDDLE CODE "> git checkout &LT; branch-name &GT; </div> <br> 
+        
+            <div class="container container-center SIZE">
+                Create and switch to a new branch:
+
+
+            </div><br> 
+            <div class=" container container-MIDDLE CODE "> git checkout -b &LT;new-branch-name&GT; </div> <br> <br> 
+
+
+
+            <h2 id="GIT-ADD" class="container container-center"> 5. GIT ADD </h2><br> <br> 
+            <div class="container container-center SIZE">TThe git adds command adds your changes in a file to the staging area where you can compare your local version and the version on the remote repository.
+<BR> <BR>
+                Before you commit your new or modified file, it should be added to the staging area by using the git add command.
+            </div><br> 
+            <h3 class="container container-center">USAGE </h3><br> 
+            <div class="container container-center SIZE">
+                Add specific files:
+            </div><br> 
+            <div class=" container container-MIDDLE CODE "> $ git add &LT;file-name-1&GT; &LT;file-name-2&GT; </div> <br> 
+        
+            <div class="container container-center SIZE">
+                Add all new, modified, and deleted files:
+
+
+
+            </div><br> 
+            <div class=" container container-MIDDLE CODE "> $ git add -A </div> <br> 
+            <div class="container container-center SIZE">
+                Add modified and deleted files:
+
+
+            </div><br> 
+            <div class=" container container-MIDDLE CODE "> $ git add -u </div> <br> <br> 
+
+
+
+            <h2 id="GIT-COMMIT" class="container container-center"> 6. GIT COMMIT </h2><br> <br> 
+            <div class="container container-center SIZE">git commit saves the changes in your local repository. Every time you commit your code changes, 
+                you have to include a brief description of the changes made.
+                 This commit message helps others understand the changes that have been done.
+            </div><br> 
+            <h3 class="container container-center">USAGE </h3><br> 
+            <div class="container container-center SIZE">
+                Commit any files added with the git add command and files that have been changed since then:
+            </div><br> 
+            <div class=" container container-MIDDLE CODE "> $ git commit -a </div> <br> 
+
+         <div class=" container container-MIDDLE NOTE-SECTION "> Note: After running the above command, the default editor will open to provide a commit message. </div> <br>
+            <div class="container container-center SIZE">
+                Commit files with a message:
+
+
+            </div><br> 
+            <div class=" container container-MIDDLE CODE "> $ git commit -m “&LT;commit-message&GT;” </div> <br> 
+            <div class="container container-center SIZE">
+                You can replace the two previous commands with the following single command:
+
+
+            </div><br> 
+            <div class=" container container-MIDDLE CODE "> $ git commit -am “&LT;commit-message&GT;” </div> <br> 
+            <div class="container container-center SIZE">
+                Modify the last commit with the latest changes as a new commit:
+
+            </div><br> 
+            <div class=" container container-MIDDLE CODE "> $ git commit --amend -m “&LT;commit-message&GT; "
+            </div> <br> <br> 
+            <h3 class="container container-center">CONCLUSION </h3><br> 
+            <div class="container container-center SIZE">
+                Thanks for reading! In this blog, we have learned some of the most used Git commands to enhance our productivity.
+                 Try these Git commands in your day-to-day coding life.
+            </div><br> <br> 
+            
+            
+
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <footer class="footer">
         <div class="footer-heading">CONNECT WITH ME</div>
         <ul class="NON-BULLET">
-            <li class="LIST-ITEM-INLINE"> <a class="link" href="https://twitter.com/aaugaxtin?s=8"> TWITTER</a>  </li class="LIST-ITEM-INLINE">
-            <li class="LIST-ITEM-INLINE"><a  class="link" href="http://github.com/jebaznadar"> GITHUB</a></li class="LIST-ITEM-INLINE">
-            <li class="LIST-ITEM-INLINE"> <a  class="link" href="https://www.linkedin.com/in/jebaz-augastin-nadar-333831142"> LINKEDIN</a> </li>
-            <li class="LIST-ITEM-INLINE"> <a  class="link" href="https://instagram.com/augaxtin?igshid=ZDdkNTZiNTM="> INSTAGRAM</a> </li>
+            <li class="LIST-ITEM-INLINE"> <a class="link" href="https://twitter.com/aaugaxtin?s=8"> TWITTER</a> </li
+                class="LIST-ITEM-INLINE">
+            <li class="LIST-ITEM-INLINE"><a class="link" href="http://github.com/jebaznadar"> GITHUB</a></li
+                class="LIST-ITEM-INLINE">
+            <li class="LIST-ITEM-INLINE"> <a class="link"
+                    href="https://www.linkedin.com/in/jebaz-augastin-nadar-333831142"> LINKEDIN</a> </li>
+            <li class="LIST-ITEM-INLINE"> <a class="link" href="https://instagram.com/augaxtin?igshid=ZDdkNTZiNTM=">
+                    INSTAGRAM</a> </li>
         </ul>
 
     </footer>
 </body>
+
 </html>
