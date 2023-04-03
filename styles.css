@@ -22,10 +22,14 @@ HR{
     max-width: 600px;
     margin: auto;
 }
+.container-MIDDLE{
+    max-width: 400px;
+    margin: auto;
+}
 
 .link {
 text-decoration: none;
-padding: 0.5rem 1rem ;
+padding: 0.5rem 0.2rem ;
 }
 .link-primary{
     background-color: var(--primarycolor);
@@ -95,6 +99,10 @@ margin: auto;
 
 section{
     padding: 2rem;
+    margin: 2rem 0;
+    border-radius: 1rem;
+    text-align: center;
+
 }
 .footer{
     background-color: var(--primarycolor);
@@ -119,4 +127,12 @@ color: white;
 }
 .SIZE{
     font-size: larger;
+}
+.CODE{
+    padding: 0.2em 0.4em;
+    margin: 0;
+    font-size: 85%;
+    background-color: rgba(27,31,35,.05);
+    border-radius: 3px;
+}
 }
