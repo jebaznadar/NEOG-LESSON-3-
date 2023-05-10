@@ -30,11 +30,15 @@ HR{
 .link {
 text-decoration: none;
 padding: 0.5rem 0.2rem ;
+
 }
 .link-primary{
     background-color: var(--primarycolor);
-    border-radius: 0.5rem;
+    border-radius: 1rem;
     color: white;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin: 1rem;
     
 
 }
@@ -42,9 +46,11 @@ padding: 0.5rem 0.2rem ;
 
 }
 .link-secondary{
-    border-radius: 0.5rem;
+    border-radius: 1rem;
    color: var(--primarycolor);
    border: 1px solid var(--primarycolor); 
+   padding-left: 1rem;
+   padding-right: 1rem;
 }
 .link-teritiary {
     border-radius: 0.5rem;
