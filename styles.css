@@ -68,6 +68,7 @@ padding: 0.5rem 0.2rem ;
     color: white;
     padding: 1rem;
     border-bottom-left-radius: 1rem;
+    /* height: 80px; */
 }
 .navigation .link-active {
     font-weight: bold;
@@ -77,6 +78,12 @@ padding: 0.5rem 0.2rem ;
 }
 .navigation .link{
     color: white;
+}
+.NAVBAR-IMG{
+    Max-width: 80px;
+    font-display:  block;
+     margin-right: 100px; 
+
 }
 .hero{
     padding: 2rem;
@@ -105,6 +112,7 @@ margin: auto;
 
 section{
     padding: 2rem;
+padding-top: 1rem;
     margin: 2rem 0;
     border-radius: 1rem;
     text-align: center;
@@ -165,4 +173,7 @@ color: white;
     margin-block-end: 1em;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
+}
+.font{
+    font-family: 'Kalam', cursive;
 }
