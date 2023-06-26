@@ -7,11 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>blog 1</title>
     <link href="/styles.css" rel="stylesheet" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Kalam&display=swap');
+      </style>
 </head>
 
 <body>
     <nav class="navigation container">
-        <h3>WEB DEVELOPER</h3>
+    <h1 class="font">AUGASTIN.DEV</h1>
+
         <UL Class="NON-BULLET navpills ">
 
             <LI class=" LIST-ITEM-INLINE  "> <A class="link" HREF="/INDEX.HTML">HOME</A> </LI>
@@ -27,8 +31,10 @@
 
     </HEADER>
     <article>
-        <p class="container container-center SIZE">  The article explains a few less common git commands, which are extremely useful. 
-            There are many rare git commands, in this article, we will see 5 of them, and we will keep exploring more such git commands in upcoming articles.<br><br>
+        <p class="container container-center SIZE"> The article explains a few less common git commands, which are
+            extremely useful.
+            There are many rare git commands, in this article, we will see 5 of them, and we will keep exploring more
+            such git commands in upcoming articles.<br><br>
             Let’s explore them <br><br>
             <UL class="container container-MIDDLE SIZE">
                 <LI><A class="link" href="#GIT-CHERRY-PICK">GIT CHERRY-PICK</A></LI> <BR>
@@ -37,26 +43,28 @@
                 <LI><A class="link" href="#GIT-SWITCH">GIT SWITCH</A></LI> <BR>
                 <LI><A class="link" href="#GIT-RESTORE">GIT ADD</A></LI> <BR>
                 <BR>
-                
+
             </UL>
 
-            <h2 id="GIT-CHERRY-PICK" class="container container-center"> 1. GIT CHERRY-PICK </h2><br> <br> 
-            <div class="container container-center SIZE">The purpose of ‘cherry-pick’ command is to choose a commit from one branch and apply it to another branch.<BR>
+            <h2 id="GIT-CHERRY-PICK" class="container container-center"> 1. GIT CHERRY-PICK </h2><br> <br>
+            <div class="container container-center SIZE">The purpose of ‘cherry-pick’ command is to choose a commit from
+                one branch and apply it to another branch.<BR>
 
-                Consider we have 2 branches, ‘main’ and ‘demo’. We are at the ‘main’ branch, we have some commits in the ‘main’ branch which we need to push to the ‘demo’ branch. Cherry-picking is a three-step process.<BR>
+                Consider we have 2 branches, ‘main’ and ‘demo’. We are at the ‘main’ branch, we have some commits in the
+                ‘main’ branch which we need to push to the ‘demo’ branch. Cherry-picking is a three-step process.<BR>
                 <br>
                 Step1: Move to ‘demo’ branch, branch where we need to apply the change
             </div>
         </p>
     </article>
 
-   
 
-     <br> 
+
+    <br>
 
     <div class=" container container-MIDDLE CODE SIZE"> $ git checkout 'demo'</div> <br>
     <div class="SIZE container-center">Step2: cherry-pick the commit id from the 'main' branch. </div><br>
-    <div class=" container container-MIDDLE CODE "> $ git cherry-pick 15cd2879d506bdc02</div> <br><br> 
+    <div class=" container container-MIDDLE CODE "> $ git cherry-pick 15cd2879d506bdc02</div> <br><br>
     <div class="SIZE container-center">Step3: Push . </div><br>
     <div class=" container container-MIDDLE CODE "> $ git push</div> <br><br>
     <div class="SIZE container-center">Our cherry-picked commit is now in the ‘demo’ branch. </div><br>
@@ -65,127 +73,150 @@
 
     <h2 id="GIT-RESET" Class="container container-center"> 2. GIT RESET </h2><br> <br> <BR>
     <div class="container container-center SIZE">
-        Sometimes we think a bunch of changes are ready for committing – but directly after making the commit, we notice that we were too quick.<BR><BR>
+        Sometimes we think a bunch of changes are ready for committing – but directly after making the commit, we notice
+        that we were too quick.<BR><BR>
 
-Changes could be missing, we could have hit the wrong branch, or a multitude of other problems could have happened. <BR><BR>
+        Changes could be missing, we could have hit the wrong branch, or a multitude of other problems could have
+        happened. <BR><BR>
 
-The only thing that's certain: we'd like to undo this last commit and get our changes back into our Working Copy!<BR><BR>
+        The only thing that's certain: we'd like to undo this last commit and get our changes back into our Working
+        Copy!<BR><BR>
 
-We can use the git reset command with a special set of options:<BR><BR> 
-  
-    </h3> <br>
+        We can use the git reset command with a special set of options:<BR><BR>
 
-    <div class=" container container-MIDDLE CODE "> $ git reset --mixed HEAD~1 </div> <br><br> 
-    <div class="container container-center ">
-        The "--mixed" option makes sure that the changes contained in the commits being reset are NOT discarded. Instead, they are preserved as local changes in the Working Copy.<BR><BR>
+        </h3> <br>
 
-        Using the "HEAD~1" notation is a great shortcut to specify "the commit before the latest one" – which is exactly what we want in order to undo the very last commit.<BR><BR>
+        <div class=" container container-MIDDLE CODE "> $ git reset --mixed HEAD~1 </div> <br><br>
+        <div class="container container-center ">
+            The "--mixed" option makes sure that the changes contained in the commits being reset are NOT discarded.
+            Instead, they are preserved as local changes in the Working Copy.<BR><BR>
 
-    <h2 id="GIT-DIFF" Class="container container-center"> 3. GIT DIFF </h2><br> 
-    <div class="container container-center ">
-        After making some changes to a file in a feature branch, you might want to compare it to how it looks on another branch. <br>
-        for eg:<br>
-        you are currently on the "feature/login" branch and want to understand how the file "myFile.txt" here is different from its version on the "develop" branch.<br><br>
-        The git diff command can do this if you provide the following parameters:
-    </div><br> 
-    
-    
-    <div class=" container container-MIDDLE CODE "> $ git diff develop -- myFile.txt</div> <br>
-    <div class="container container-center ">
-        You'll then see a nice, clear diff that shows how exactly your file differs from its version on the other branch.
-    </div>
+            Using the "HEAD~1" notation is a great shortcut to specify "the commit before the latest one" – which is
+            exactly what we want in order to undo the very last commit.<BR><BR>
 
-    <br>
-
-    <div class=" container container-MIDDLE CODE "> $ git branch -a </div> <br> 
-    <div class="container container-center ">
-        View all branches and see which branch you’re currently working on:
-    </div> <br> 
-   
-
-
-    <h3 id="GIT-SWITCH" class="container container-center"> 4. GIT SWITCH</h3><br> <br> 
-            <div class="container container-center ">The git checkout command has a multitude of different jobs and meanings.<BR>
-                 That's why, pretty recently, the Git community decided to publish a new command:
-                 git switch. As the name implies, it was made specifically for the task of switching branches:<BR>
-            </div><br> 
-          <br> 
-            <div class=" container container-MIDDLE CODE "> $ git switch develop </div> <br> 
-        
+            <h2 id="GIT-DIFF" Class="container container-center"> 3. GIT DIFF </h2><br>
             <div class="container container-center ">
-                As you can see, its usage is very straightforward and similar to "git checkout". 
-                But the huge advantage over the "checkout" command is that "switch" does NOT have a million other meanings and capabilities.
+                After making some changes to a file in a feature branch, you might want to compare it to how it looks on
+                another branch. <br>
+                for eg:<br>
+                you are currently on the "feature/login" branch and want to understand how the file "myFile.txt" here is
+                different from its version on the "develop" branch.<br><br>
+                The git diff command can do this if you provide the following parameters:
+            </div><br>
 
 
-            </div><br> 
+            <div class=" container container-MIDDLE CODE "> $ git diff develop -- myFile.txt</div> <br>
             <div class="container container-center ">
-                In some scenarios, it might be necessary for you to switch back and forth between two branches repeatedly. 
+                You'll then see a nice, clear diff that shows how exactly your file differs from its version on the
+                other branch.
+            </div>
+
+            <br>
+
+            <div class=" container container-MIDDLE CODE "> $ git branch -a </div> <br>
+            <div class="container container-center ">
+                View all branches and see which branch you’re currently working on:
+            </div> <br>
+
+
+
+            <h3 id="GIT-SWITCH" class="container container-center"> 4. GIT SWITCH</h3><br> <br>
+            <div class="container container-center ">The git checkout command has a multitude of different jobs and
+                meanings.<BR>
+                That's why, pretty recently, the Git community decided to publish a new command:
+                git switch. As the name implies, it was made specifically for the task of switching branches:<BR>
+            </div><br>
+            <br>
+            <div class=" container container-MIDDLE CODE "> $ git switch develop </div> <br>
+
+            <div class="container container-center ">
+                As you can see, its usage is very straightforward and similar to "git checkout".
+                But the huge advantage over the "checkout" command is that "switch" does NOT have a million other
+                meanings and capabilities.
+
+
+            </div><br>
+            <div class="container container-center ">
+                In some scenarios, it might be necessary for you to switch back and forth between two branches
+                repeatedly.
                 Instead of always writing out the branch names in full, you can simply use the following shortcut:
 
 
-            </div><br> 
+            </div><br>
 
-            <div class=" container container-MIDDLE CODE "> $ git switch - </div> <br> <br> 
+            <div class=" container container-MIDDLE CODE "> $ git switch - </div> <br> <br>
             <div class="container container-center ">
-                Using the dash character as its only parameter, the "git switch" command will check out the previously active branch. 
-                As said, this can come in very handy if you have to go back and forth between two branches a bunch of times.
+                Using the dash character as its only parameter, the "git switch" command will check out the previously
+                active branch.
+                As said, this can come in very handy if you have to go back and forth between two branches a bunch of
+                times.
 
-            </div><br> 
+            </div><br>
 
 
 
-            <h2 id="GIT-RESTORE" class="container container-center"> 5. GIT RESTORE</h2><br> <br> 
-            <div class="container container-center ">Until recently, you had to use some form of git checkout or git reset when you wanted to undo local changes. <BR><BR>
+            <h2 id="GIT-RESTORE" class="container container-center"> 5. GIT RESTORE</h2><br> <br>
+            <div class="container container-center ">Until recently, you had to use some form of git checkout or git
+                reset when you wanted to undo local changes. <BR><BR>
 
-                But with the git restore command, we now have a command that was made exactly for this purpose. This sets it apart from "checkout" and "reset", because those commands have plenty of other use cases.<BR><BR>
-                
+                But with the git restore command, we now have a command that was made exactly for this purpose. This
+                sets it apart from "checkout" and "reset", because those commands have plenty of other use
+                cases.<BR><BR>
+
                 Here's a quick overview of the most important things you can do with "git restore":<BR><BR>
-            </div><br> 
-            
-           <br> 
+            </div><br>
+
+            <br>
             <div class=" container container-MIDDLE CODE "> # Unstaging a file, but leaving its actual changes untouched
                 $ git restore --staged myFile.txt <BR>
-                
+
                 # Discarding your local changes in a certain file
                 $ git restore myFile.txt <BR>
-                
+
                 # Undoing all of the local changes in the working copy (be careful)<BR>
-                $ git restore . </div> <br> 
-        
+                $ git restore . </div> <br>
+
             <div class="container container-center ">
-                The git restore command offers another very helpful option named "--source". With this option's help, you can easily restore any previous version of a specific file:
+                The git restore command offers another very helpful option named "--source". With this option's help,
+                you can easily restore any previous version of a specific file:
 
 
 
-            </div><br> 
-            <div class=" container container-MIDDLE CODE ">$ git restore --source 6bcf266b index.html</div> <br> 
+            </div><br>
+            <div class=" container container-MIDDLE CODE ">$ git restore --source 6bcf266b index.html</div> <br>
             <div class="container container-center ">
-                If you need some help finding the right revision, you can use a desktop Git client like Tower: with a feature like its "File History", 
-                you can easily inspect only the changes that happened in a certain file – and then select a revision to restore.
+                If you need some help finding the right revision, you can use a desktop Git client like Tower: with a
+                feature like its "File History",
+                you can easily inspect only the changes that happened in a certain file – and then select a revision to
+                restore.
 
-            </div><br> 
+            </div><br>
             <div class="container container-center ">
-                Although Git is so well-known these days, much of its power is still unknown to the public. 
-                It's true that you can "survive" with just a handful commands like commit, push, and pull. But this is like driving a Ferrari in first gear only! <BR><BR>
+                Although Git is so well-known these days, much of its power is still unknown to the public.
+                It's true that you can "survive" with just a handful commands like commit, push, and pull. But this is
+                like driving a Ferrari in first gear only! <BR><BR>
 
-                 If you're willing to dive a bit deeper, you will discover some of the more powerful features of Git.
-                 And these have the potential to not only make you more productive, but also – ultimately – a better developer!<BR>
+                If you're willing to dive a bit deeper, you will discover some of the more powerful features of Git.
+                And these have the potential to not only make you more productive, but also – ultimately – a better
+                developer!<BR>
 
             </div><br> <br>
 
 
-<footer class="footer">
-        <div class="footer-heading">CONNECT WITH ME</div>
-        <ul class="NON-BULLET">
-            <li class="LIST-ITEM-INLINE"> <a class="link" href="https://twitter.com/aaugaxtin?s=8"> TWITTER</a> </li>
-            <li class="LIST-ITEM-INLINE"><a class="link" href="http://github.com/jebaznadar"> GITHUB</a></li>
-            <li class="LIST-ITEM-INLINE"> <a class="link"
-                    href="https://www.linkedin.com/in/jebaz-augastin-nadar-333831142"> LINKEDIN</a> </li>
-            <li class="LIST-ITEM-INLINE"> <a class="link" href="https://instagram.com/augaxtin?igshid=ZDdkNTZiNTM=">
-                    INSTAGRAM</a> </li>
-        </ul>
+ <footer class="footer" >
+                <div class="footer-heading">CONNECT WITH ME</div>
+                <ul class="NON-BULLET">
+                    <li class="LIST-ITEM-INLINE"> <a class="link" href="https://twitter.com/aaugaxtin?s=8"> TWITTER</a>
+                    </li>
+                    <li class="LIST-ITEM-INLINE"><a class="link" href="http://github.com/jebaznadar"> GITHUB</a></li>
+                    <li class="LIST-ITEM-INLINE"> <a class="link"
+                            href="https://www.linkedin.com/in/jebaz-augastin-nadar-333831142"> LINKEDIN</a> </li>
+                    <li class="LIST-ITEM-INLINE"> <a class="link"
+                            href="https://instagram.com/augaxtin?igshid=ZDdkNTZiNTM=">
+                            INSTAGRAM</a> </li>
+                </ul>
 
-</footer>
+            </footer>
 </body>
 
 </html>
